@@ -46,8 +46,7 @@ POST = '''\
 def main():
   '''Main page of the forum.'''
   posts = "".join(POST % (date, text) for text, date in get_posts())
-  html = HTML_WRAP % posts
-  return html
+  return HTML_WRAP % posts
 
 
 @app.route('/', methods=['POST'])
